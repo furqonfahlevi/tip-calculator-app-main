@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <div class="logo-splitter">
+      <img src="images/logo.svg" alt="splitter" />
+    </div>
+    <section class="main-section">
+      <div class="white-box-container">
+        <div class="left-container">
+          <div class="bill-input-container">
+            <p class="p-form">Bill</p>
+
+            <input
+              id="bill-input"
+              type="number"
+              step="0.01"
+              name="bill-input-form"
+              class="bill-input-form"
+              placeholder="0"
+            />
+          </div>
+
+          <div class="select-tip-container">
+            <p class="p-form">Select Tip %</p>
+            <div id="myDIV" class="select-tip-percent-btn">
+              <button id="btnActived" class="p5 percent">5%</button>
+              <button id="btnActived" class="p10 percent">10%</button>
+              <button id="btnActived" class="p15 percent">15%</button>
+              <button id="btnActived" class="p25 percent">25%</button>
+              <button id="btnActived" class="p50 percent">50%</button>
+              <input
+                type="number"
+                id="custom-input"
+                name="custom-tip-input-form"
+                class="custom-tip-input-form"
+                placeholder="Custom"
+              />
+            </div>
+          </div>
+
+          <div class="number-of-people-container">
+            <div class="p-people-container">
+              <p class="p-form">Number of People</p>
+              <p id="text-alert" class="p-form">Can't be zero</p>
+            </div>
+            <input
+              type="number"
+              id="people-input"
+              name="number-of-people-input-form"
+              class="number-of-people-input-form"
+              placeholder="0"
+            />
+          </div>
+        </div>
+
+        <div class="right-container">
+          <div class="green-box-container">
+            <div class="green-box-items">
+              <div class="p-container">
+                <p class="p-amount">Tip Amount</p>
+                <p class="p-person">/ person</p>
+              </div>
+              <p id="tip-amount" class="dollar-amount">$0.00</p>
+            </div>
+
+            <div class="green-box-items">
+              <div class="p-container">
+                <p class="p-amount">Total</p>
+                <p class="p-person">/ person</p>
+              </div>
+              <p id="total-amount" class="dollar-amount">$0.00</p>
+            </div>
+
+            <div class="reset-btn-container">
+              <button id="reset" class="reset-btn" disabled>Reset</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/furqonfahlevi"
+        >Muhammad Furqon Fahlevi</a
+      >.
+    </div>
+
+    <!-- <script src="main.js"></script> -->
+    <script src="jquery.js"></script>
+  </body>
+</html>

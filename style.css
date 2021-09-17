@@ -1,0 +1,462 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+/* Var CSS */
+:root {
+  /* HSL color mode */
+  --white: hsl(0, 0%, 100%);
+  --strong-cyan: hsl(172, 67%, 45%);
+  --dark-cyan: #0c686d;
+  --jagged-ice: #c5e4e7;
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan-1: hsl(186, 14%, 43%);
+  --dark-grayish-cyan-2: hsl(184, 14%, 56%);
+  --light-grayish-cyan-1: hsl(185, 41%, 84%);
+  --light-grayish-cyan-2: hsl(189, 41%, 97%);
+  --red-alert: rgb(255, 86, 86);
+
+  /* Font Family */
+  --body-font: "Space Mono", monospace;
+
+  /* Font Size */
+  --bigger-font-size: 1.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.logo-splitter {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 75px;
+}
+
+body {
+  background-color: var(--jagged-ice);
+  font-family: var(--body-font);
+}
+
+/* Main Section - (Tip Calculator) */
+.white-box-container {
+  background-color: var(--white);
+  margin: 0 auto;
+  width: 1028px;
+  border: var(--white);
+  padding: 50px;
+  border-radius: 25px;
+  display: flex;
+  gap: 2.5em;
+}
+
+/* Seperator Container */
+.left-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 400px;
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 400px;
+}
+
+/* Main Section - (Tip Calculator) ----- First-Left Content */
+.bill-input-container {
+  width: 100%;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+}
+
+.p-form {
+  color: var(--dark-grayish-cyan-1);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.bill-input-form {
+  width: 100%;
+  color: var(--very-dark-cyan);
+  font-size: var(--bigger-font-size);
+  font-family: var(--body-font);
+  font-weight: 700;
+  background: url(images/icon-dollar.svg) no-repeat scroll 10px 10px;
+  background-position: 7px center;
+  background-color: var(--light-grayish-cyan-2);
+  text-align: right;
+  border: 2.5px solid transparent;
+  border-radius: 7px;
+  padding: 0 5px;
+  margin-bottom: 50px;
+  -moz-appearance: textfield;
+  cursor: pointer;
+}
+
+.bill-input-form::-webkit-outer-spin-button,
+.bill-input-form::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.bill-input-form:focus {
+  outline: none;
+  border: 2.5px solid var(--strong-cyan);
+}
+
+/* Main Section - (Tip Calculator) ----- Second-Left Content */
+.select-tip-container {
+  width: 100%;
+}
+
+.select-tip-percent-btn {
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto auto auto;
+  gap: 1em;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--bigger-font-size);
+  margin-bottom: 50px;
+}
+
+.percent {
+  background: var(--very-dark-cyan);
+  width: 139px;
+  height: 50px;
+  color: var(--white);
+  border: none;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--body-font);
+  font-size: var(--bigger-font-size);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.percent:hover {
+  background-color: var(--jagged-ice);
+  color: var(--very-dark-cyan);
+  transition: 0.15s;
+}
+
+.percent:active {
+  background-color: var(--jagged-ice);
+  color: var(--very-dark-cyan);
+}
+
+.active {
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+  transition: 0.2s;
+}
+
+.custom-tip-input-form {
+  width: 139px;
+  color: var(--very-dark-cyan);
+  font-size: var(--bigger-font-size);
+  font-family: var(--body-font);
+  font-weight: 700;
+  text-align: center;
+  border: 2.5px solid transparent;
+  background-color: var(--light-grayish-cyan-2);
+  border-radius: 7px;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  cursor: pointer;
+}
+
+.custom-tip-input-form::-webkit-outer-spin-button,
+.custom-tip-input-form::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.custom-tip-input-form:focus {
+  outline: none;
+  border: 2.5px solid var(--strong-cyan);
+}
+
+/* Main Section - (Tip Calculator) ----- Third-Left Content */
+.number-of-people-container {
+  width: 100%;
+}
+
+.number-of-people-input-form {
+  width: 100%;
+  color: var(--very-dark-cyan);
+  font-size: var(--bigger-font-size);
+  font-family: var(--body-font);
+  font-weight: 700;
+  background: url(images/icon-person.svg) no-repeat scroll 10px 10px;
+  background-position: 7px center;
+  background-color: var(--light-grayish-cyan-2);
+  text-align: right;
+  border: 2.5px solid transparent;
+  border-radius: 7px;
+  padding: 0 5px;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  cursor: pointer;
+}
+
+.number-of-people-input-form::-webkit-outer-spin-button,
+.number-of-people-input-form::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.number-of-people-input-form:focus {
+  outline: none;
+  border: 2.5px solid var(--strong-cyan);
+}
+
+.p-people-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.alert-outline {
+  outline: none;
+  border: 2.5px solid var(--red-alert);
+}
+
+.alert-text {
+  color: var(--red-alert);
+}
+
+#text-alert {
+  display: none;
+}
+/* Main Section - (Tip Calculator) ----- Right Content */
+.green-box-container {
+  background-color: var(--very-dark-cyan);
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.green-box-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 30px 0 30px;
+}
+
+.dollar-amount {
+  color: var(--strong-cyan);
+  font-size: 3rem;
+  display: flex;
+}
+
+.p-amount {
+  color: var(--white);
+}
+
+.p-person {
+  color: var(--dark-grayish-cyan-2);
+  font-size: 0.8rem;
+}
+
+.reset-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 125px;
+}
+
+.reset-btn {
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+  width: 85%;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: var(--body-font);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.reset-btn:not([disabled]):hover {
+  background-color: var(--jagged-ice);
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.reset-btn:not([disabled]):active {
+  background-color: var(--jagged-ice);
+}
+
+.deactive {
+  background-color: var(--dark-cyan);
+}
+
+/* Footer */
+.attribution {
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 75px;
+  margin-bottom: 100px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1080px) {
+  .white-box-container {
+    width: 720px;
+  }
+
+  .bill-input-form,
+  .percent,
+  .custom-tip-input-form,
+  .number-of-people-input-form {
+    font-size: 1.2rem;
+  }
+
+  .percent,
+  .custom-tip-input-form {
+    width: 86px;
+  }
+
+  .dollar-amount {
+    font-size: 2.2rem;
+  }
+
+  .reset-btn-container {
+    margin-top: 150px;
+  }
+
+  .p-amount {
+    font-size: 0.9rem;
+  }
+
+  .p-person {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .white-box-container {
+    width: 70%;
+    flex-direction: column;
+  }
+
+  .left-container {
+    width: 100%;
+  }
+
+  .right-container {
+    width: 100%;
+  }
+
+  .percent,
+  .custom-tip-input-form {
+    width: 90px;
+  }
+
+  .reset-btn-container {
+    margin-top: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  .percent,
+  .custom-tip-input-form {
+    width: 78px;
+  }
+
+  .dollar-amount {
+    font-size: 1.7rem;
+  }
+
+  .p-amount {
+    font-size: 0.78rem;
+  }
+
+  .p-person {
+    font-size: 0.55rem;
+  }
+
+  .reset-btn-container {
+    margin-top: 200px;
+  }
+}
+
+@media (max-width: 545px) {
+  .select-tip-percent-btn {
+    grid-template-columns: auto auto;
+  }
+
+  .percent,
+  .custom-tip-input-form {
+    width: 93px;
+  }
+
+  .right-container {
+    margin-top: 80px;
+  }
+
+  .reset-btn-container {
+    margin-top: 200px;
+  }
+}
+
+@media (max-width: 445px) {
+  .select-tip-percent-btn {
+    grid-template-columns: auto;
+  }
+
+  .percent,
+  .custom-tip-input-form {
+    width: 130px;
+    height: 50px;
+  }
+
+  .right-container {
+    margin-top: 290px;
+  }
+
+  .green-box-items {
+    flex-direction: column;
+    gap: 1em;
+    text-align: center;
+  }
+
+  .dollar-amount {
+    font-size: 1.6rem;
+  }
+
+  .p-amount {
+    font-size: 0.9rem;
+  }
+
+  .p-person {
+    font-size: 0.69rem;
+  }
+
+  .reset-btn-container {
+    margin-top: 70px;
+  }
+}
